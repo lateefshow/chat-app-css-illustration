@@ -1,0 +1,200 @@
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background: #f9f9fb;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main container splits into left and right */
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  min-height: 600px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Left purple section */
+.left-section {
+  background: linear-gradient(135deg, #a076f9, #8f59d3);
+  flex: 1;
+}
+
+/* Right section holds content */
+.right-section {
+  flex: 2;
+  background: #f9f9fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Wrap phone and text side by side */
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Phone mockup */
+.phone {
+  background: white;
+  border-radius: 30px;
+  padding: 20px 15px;
+  width: 300px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-header {
+  background: linear-gradient(135deg, #a076f9, #8f59d3);
+  padding: 20px 15px;
+  border-radius: 20px 20px 5px 5px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.phone-header small {
+  font-weight: normal;
+  font-size: 12px;
+}
+
+/* Chat area */
+.chat {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 5px;
+  flex-grow: 1;
+}
+
+/* Chat bubbles */
+.message {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.received {
+  background: #ececec;
+  align-self: flex-start;
+}
+
+.sent {
+  background: #a076f9;
+  color: white;
+  align-self: flex-end;
+}
+
+/* Images row */
+.images {
+  display: flex;
+  gap: 5px;
+  align-self: flex-start;
+}
+
+.images img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Options for walk times */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option {
+  background: linear-gradient(135deg, #a076f9, #8f59d3);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.option input {
+  display: none;
+}
+
+.option label {
+  cursor: pointer;
+}
+
+/* Input box at bottom */
+.input-box {
+  display: flex;
+  margin-top: auto;
+  background: #ececec;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  flex: 1;
+  background: transparent;
+}
+
+.input-box button {
+  background: transparent;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Text content */
+.text-content {
+  max-width: 400px;
+}
+
+.text-content h1 {
+  font-size: 36px;
+  color: #3e3e5c;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+}
