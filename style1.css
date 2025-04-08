@@ -108,7 +108,7 @@ body {
 .images {
   display: flex;
   gap: 5px;
-  align-self: flex-start;
+  align-self: flex-end;
 }
 
 .images img {
